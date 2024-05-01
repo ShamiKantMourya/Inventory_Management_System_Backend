@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Laptop",
+    "category": "Electronics",
+    "quantity": 2,
+    "price": 800
+  },
+  {
+    "name": "Headphones",
+    "category": "Electronics",
+    "quantity": 5,
+    "price": 50
+  },
+  {
+    "name": "Notebook",
+    "category": "Stationery",
+    "quantity": 10,
+    "price": 5
+  },
+  {
+    "name": "Camera",
+    "category": "Electronics",
+    "quantity": 1,
+    "price": 1000
+  },
+  {
+    "name": "Mouse",
+    "category": "Electronics",
+    "quantity": 3,
+    "price": 20
+  }
+]
