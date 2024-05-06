@@ -10,7 +10,7 @@ const itemSchema = new mongoose.Schema(
       type: String,
       enum: ["Electronics", "Stationery", "Food", "Furniture", "Sports"],
       default: "Electronics",
-      required: true,
+      // required: true,
     },
     quantity: {
       type: Number,
