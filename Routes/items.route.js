@@ -19,6 +19,6 @@ router.route("/").post(addItems);
 router.route("/:itemId").delete(deleteItem);
 
 //Update item
-router.route("/:itemId").put(updateItem);
+router.route("/:itemId").post(updateItem);
 
 module.exports = router;
