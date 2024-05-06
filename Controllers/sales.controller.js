@@ -10,7 +10,7 @@ exports.getAllSales = async (req, res) => {
     if (allSales) {
       res.status(200).json({
         success: true,
-        sales: allSales,
+        sale: allSales,
       });
     }
   } catch (error) {
