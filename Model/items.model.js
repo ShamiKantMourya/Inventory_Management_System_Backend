@@ -8,9 +8,9 @@ const itemSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ["Electronics", "Stationery", "Food", "Furniture", "Sports"],
-      default: "Electronics",
-      // required: true,
+      // enum: ["Electronics", "Stationery", "Food", "Furniture", "Sports"],
+      // default: "Electronics",
+      required: true,
     },
     quantity: {
       type: Number,
