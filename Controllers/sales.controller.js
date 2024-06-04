@@ -7,12 +7,10 @@ exports.getAllSales = async (req, res) => {
       path: "description",
       select: "name",
     });
-    if (allSales) {
       res.status(200).json({
         success: true,
         sale: allSales,
       });
-    }
   } catch (error) {
     res.stauts(500).json({
       success: false,
@@ -40,14 +38,11 @@ exports.addSale = async (req, res) => {
       path: "description",
       select: "name",
     });
-
-    if (savedNewSale) {
       res.status(200).json({
         success: true,
         message: "Sale added successfully",
         sale: savedNewSale,
       });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,

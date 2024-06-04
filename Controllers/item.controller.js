@@ -27,12 +27,10 @@ const seedItemDatabase = async () => {
 exports.getAllItems = async (req, res) => {
   try {
     const items = await Item.find({});
-    if (items) {
       res.status(200).json({
         success: true,
         item: items,
       });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -49,18 +47,11 @@ exports.addItems = async (req, res) => {
     const item = req.body;
     const newItem = new Item(item);
     const savedItem = await newItem.save();
-    if (savedItem) {
       res.status(201).json({
         success: true,
         message: "Item added successfully",
         item: savedItem,
       });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "Item not added",
-      });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -75,13 +66,11 @@ exports.deleteItem = async (req, res) => {
   try {
     const itemId = req.params.itemId;
     const deletedItem = await Item.findByIdAndDelete(itemId);
-    if (deletedItem) {
       res.status(200).json({
         success: true,
         message: "Item deleted successfully",
         item: deletedItem,
       });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -100,13 +89,11 @@ exports.updateItem = async (req, res) => {
     const updatedItem = await Item.findByIdAndUpdate(itemId, data, {
       new: true,
     });
-    if (updatedItem) {
       res.status(200).json({
         success: true,
         message: "Item updated successfully",
         item: updatedItem,
       });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
